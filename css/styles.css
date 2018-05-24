@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Oswald', sans-serif; }
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#heading {
+  font-size: 4em; }
+
+.slide {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  background-size: fill;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
+
+.slide#back {
+  background: url(https://image.shutterstock.com/z/stock-photo-portrait-of-cute-tender-ginger-girl-with-curly-hair-looking-at-camera-over-white-background-657764980.jpg) no-repeat center center;
+  animation-name: slideTop; }
+
+.slide#front {
+  background: url(https://image.shutterstock.com/z/stock-photo-beautiful-foxy-girl-smiling-looking-at-camera-posing-over-white-background-651481867.jpg) no-repeat center center;
+  animation-name: slideBelow; }
+
+@keyframes slideTop {
+  0% {
+    transform: translate(-200%, 100%) rotate(0deg);
+    filter: grayscale(1); }
+  50% {
+    filter: grayscale(0.85); }
+  100% {
+    transform: translate(-52%, -52%) rotate(10deg);
+    filter: grayscale(0); } }
+
+@keyframes slideBelow {
+  0% {
+    transform: translate(100%, 120%) rotate(0deg);
+    filter: grayscale(1); }
+  50% {
+    filter: grayscale(0.85); }
+  100% {
+    transform: translate(-48%, -48%) rotate(-5deg);
+    filter: grayscale(0); } }
